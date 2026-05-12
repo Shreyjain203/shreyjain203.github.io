@@ -1,155 +1,72 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Shrey Jain</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
 
-<html>
-	<head>
-		<title>Shrey Jain - Projects</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel = "icon" href = "images/me-title.jpg" type = "image/x-icon">
-	</head>
-	<body class="is-preload">
+  <nav>
+    <a href="index.html" class="site-name">Shrey Jain</a>
+    <a href="work.html">work</a>
+    <a href="projects.html" class="active">projects</a>
+    <a href="now.html">now</a>
+    <a href="uses.html">uses</a>
+  </nav>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <p class="subline">Things I built because I needed them.</p>
 
-				<!-- Header -->
-				<!-- Note: The "styleN" class below should match that of the banner element. -->
-					<header id="header" class="alt style2">
-						<a href="index.html" class="logo"><strong>Shrey</strong> <span>Jain</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+  <div class="project">
+    <h3>SYNTH</h3>
+    <em>A personal OS layer for iOS.</em>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="hobbies.html">Hobbies</a></li>
-							<li><a href="purpose.html">Life Goal</a></li>
-							<li><a href="projects.html">Projects</a></li>
-							<li><a href="experience.html">Work Experience</a></li>
-							<li><a href="education.html">Education</a></li>
-							<li><a href="certifications.html">Certifications</a></li>
-						</ul>
-					</nav>
+    <span class="why-label">Why I built it</span>
+    <p>Every notes app, reminder app, and capture tool I tried had the same problem: it stored what I said, not what I meant. I wanted something that understood context — is this a task? a thought? something I need to act on tonight or next month? I couldn't find it so I built it.</p>
 
-				<!-- Banner -->
-				<!-- Note: The "styleN" class below should match that of the header element. -->
-					<section id="banner" class="style2">
-						<div class="inner">
-							<span class="image">
-								<img src="images/pic07.jpg" alt="" />
-							</span>
-							<header class="major">
-								<h1>Projects</h1>
-							</header>
-							<div class="content">
-								<p align="justify">Here are a few of my numerous projects mentioned below. If you find them intriguing, you can visit my GitHub to access the source code for these projects.</p>
-							</div>
-						</div>
-					</section>
+    <span class="what-label">What it is</span>
+    <p>SYNTH captures raw inputs throughout the day — notes, thoughts, tasks — classifies them via LLM, and routes them intelligently. Built in Swift. Classification runs on-device and via API with tiered model routing depending on complexity. The on-device path keeps it fast. The API path handles the hard cases.</p>
 
-				<!-- Main -->
-					<div id="main">
+    <p class="tags">Swift · LLM · iOS · On-device AI</p>
+  </div>
 
-						<!-- One -->
+  <hr>
 
-						<!-- Two -->
-							<section id="two" class="spotlights">
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/decision tree.jpg" alt="" data-position="center center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Decision Tree (from Scratch)</h3>
-											</header>
-											<p align="justify">A Decision Tree is a fundamental machine learning algorithm that's widely used for both classification and regression tasks.
-												Therefore, in this data science project, I undertook the exciting challenge of constructing a Decision Tree classifier entirely from scratch using Python.
-												</p>
-											<ul class="actions">
-												<li><a href="https://github.com/Shreyjain203/Decision-Tree-from-Scratch" class="button", target="_blank">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/ronaldo.jpeg" alt="" data-position="top center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Ronaldo Goal Prediction</h3>
-											</header>
-											<p align="justify">In this intriguing data science project, 
-												I delved into the world of sports analytics to predict whether the legendary footballer, Cristiano Ronaldo, 
-												would score a goal in a given match. Unlike traditional machine learning models, 
-												this project relied solely on probability and statistical analysis, 
-												showcasing the power of these mathematical concepts in predicting real-world outcomes which comes out to be 85% accurate.</p>
-											<ul class="actions">
-												<li><a href="https://github.com/Shreyjain203/Ronaldo_goal_prediction" class="button", target="_blank">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-							</section>
+  <div class="project">
+    <h3>sarvis</h3>
+    <em>Behavioral intelligence, quietly running in the background.</em>
 
-						<!-- Three -->
-							<section id="three">
-								<div class="inner">
-									<header class="major">
-										<h2>Github</h2>
-									</header>
-									<p align="justify">These represent just a small selection of the numerous projects I've developed and shared on GitHub. If you're interested in learning more about them, you can explore them on GitHub.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/Shreyjain203?tab=repositories" class="button next" target="_blank">Get me There</a></li>
-									</ul>
-								</div>
-							</section>
+    <span class="why-label">Why I built it</span>
+    <p>I noticed I kept repeating the same mistakes — not big ones, small ones. Patterns I couldn't see because I was too close to them. I wanted something that watched over time and surfaced those patterns without me having to go looking. Not a journal. Not a mood tracker. Something quieter.</p>
 
-					</div>
+    <span class="what-label">What it is</span>
+    <p>sarvis turns unstructured daily captures into behavioral signals over time. The core pipeline — capture → LLM structuring → pattern extraction — is working. Still early. The hard part isn't the engineering, it's figuring out what a useful 'pattern' actually is.</p>
 
-				<!-- Contact -->
-                <section id="contact">
-                    <div class="inner">
-                            <section>
-                                <div class="contact-method">
-                                    <span class="icon solid alt fa-envelope"></span>
-                                    <h3>Email</h3>
-                                    <a href="mailto:shreyjain203@gmail.com">shreyjain203@gmail.com</a>
-                                </div>
-                            </section>
-                        <!-- </section> -->
-                    </div>
-                </section>
+    <p class="tags">iOS · Swift · LLM · Behavioral data</p>
+  </div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="https://www.facebook.com/profile.php?id=100005959334900" class="icon brands alt fa-facebook-f" target="_blank"><span class="label">Facebook</span></a></li>
-								<li><a href="https://www.instagram.com/shreyrerere/" class="icon brands alt fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-								<li><a href="https://github.com/shreyjain203" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/shreyjain203/" class="icon brands alt fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
-							</ul>
-						</div>
-					</footer>
+  <hr>
 
-			</div>
+  <div class="project">
+    <h3>cortex</h3>
+    <em>A PM brain for any git repo.</em>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <span class="why-label">Why I built it</span>
+    <p>Every time I started a new session with an AI coding assistant, I'd spend the first 10 minutes re-explaining the project. What it does, how it's structured, what's already been tried. That's wasted time every single session. I wanted the assistant to already know. So I made a way for it to know.</p>
 
-	</body>
+    <span class="what-label">What it is</span>
+    <p>cortex is a Claude Code skill I built and open-sourced. It installs a post-commit hook that automatically scans your repo and updates a private context file after every push. Any AI assistant you bring into the project picks it up immediately. No re-explaining.</p>
+
+    <p class="tags">Claude Code · Shell · Open source · Developer tools</p>
+    <p style="font-size:0.8rem; margin-top:0.4rem;"><a href="https://github.com/shreyjain203" target="_blank" rel="noopener">GitHub →</a></p>
+  </div>
+
+  <footer>
+    <span>shrey.jain252@gmail.com</span>
+    <a href="https://github.com/shreyjain203" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://linkedin.com/in/shreyjain203" target="_blank" rel="noopener">LinkedIn</a>
+  </footer>
+
+</body>
 </html>
