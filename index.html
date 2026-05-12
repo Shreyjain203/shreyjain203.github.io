@@ -9,64 +9,92 @@
 <body>
 
   <nav>
-    <a href="index.html" class="site-name">Shrey Jain</a>
-    <a href="work.html">work</a>
-    <a href="projects.html">projects</a>
-    <a href="now.html">now</a>
-    <a href="uses.html">uses</a>
+    <div class="nav-inner">
+      <a href="index.html" class="site-name">Shrey Jain</a>
+      <div class="nav-links">
+        <a href="work.html">work</a>
+        <a href="projects.html">projects</a>
+        <a href="now.html">now</a>
+        <a href="uses.html">uses</a>
+      </div>
+    </div>
   </nav>
 
-  <h1>Shrey Jain</h1>
-  <p class="subline">I work on AI systems. Currently at Meta.</p>
+  <main>
+    <div class="container">
 
-  <p>I'm a data scientist and AI engineer based in San Francisco. Most of my work lives at the intersection of machine learning, operations research, and getting things to production — not just to a notebook.</p>
+      <!-- Hero -->
+      <section class="hero fade-in">
+        <h1>Shrey Jain</h1>
+        <p class="subline">I work on AI systems. Currently at Meta.</p>
+        <div class="intro">
+          <p>I'm a data scientist and AI engineer based in San Francisco. Most of my work lives at the intersection of machine learning, operations research, and getting things to production — not just to a notebook.</p>
+          <p>I've shipped models and systems at Meta, CXApp, TruckX, Dream11, and OYO. The problems change. The goal is always the same: make something that actually works at scale.</p>
+          <p>Outside of work, I build iOS apps and tools for myself — mostly things I couldn't find and decided to make.</p>
+        </div>
+      </section>
 
-  <p>I've shipped models and systems at Meta, CXApp, TruckX, Dream11, and OYO. The problems change. The goal is always the same: make something that actually works at scale.</p>
+      <!-- Currently & Recent work -->
+      <section class="fade-in">
+        <h2>Currently &amp; Recent work</h2>
+        <div class="two-col-grid">
+          <div class="card">
+            <div class="card-label">Currently</div>
+            <ul class="plain-list">
+              <li>Data Scientist @ Meta</li>
+              <li>Building SYNTH (iOS)</li>
+              <li>Open-source Claude skills</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card-label">Recent work</div>
+            <ul class="plain-list">
+              <li><a href="work.html">→ work</a></li>
+              <li><a href="projects.html">→ projects</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-  <p>Outside of work, I build iOS apps and tools for myself — mostly things I couldn't find and decided to make.</p>
+      <!-- Beliefs -->
+      <section class="fade-in">
+        <h2>A few things I believe about this work:</h2>
+        <ul class="beliefs-list">
+          <li>"Models that don't ship are hobbies."</li>
+          <li>"The most important question isn't which algorithm — it's whether anyone will look at the output."</li>
+          <li>"Latency is a feature. So is reliability. They're usually the last things people think about and the first things users notice."</li>
+          <li>"Good ML work is 20% modeling and 80% understanding what the problem actually is. Most people get this backwards."</li>
+          <li>"If you can't explain why the model is wrong, you don't understand the model."</li>
+          <li>"The best data pipeline is the one that's boring to operate."</li>
+          <li>"Optimization problems are everywhere. Most people just call them by other names."</li>
+          <li>"A/B tests tell you what happened. They rarely tell you why. That's where the interesting work starts."</li>
+          <li>"Junior engineers write code. Senior engineers decide what not to write."</li>
+          <li>"I'd rather be 80% right and in production than 99% right in a notebook."</li>
+        </ul>
+      </section>
 
-  <h2>Currently &amp; Recent work</h2>
-  <div class="two-col">
-    <div>
-      <p class="meta" style="margin-bottom:0.5rem;">Currently</p>
-      <ul class="plain-list">
-        <li>Data Scientist @ Meta</li>
-        <li>Building SYNTH (iOS)</li>
-        <li>Open-source Claude skills</li>
-      </ul>
+      <!-- Contact -->
+      <div class="contact-card card fade-in">
+        <p>If you're working on something interesting or just want to talk about AI systems, data, or whatever you're building — I'm usually reachable. <a href="mailto:shrey.jain252@gmail.com">shrey.jain252@gmail.com</a></p>
+      </div>
+
     </div>
-    <div>
-      <p class="meta" style="margin-bottom:0.5rem;">Recent work</p>
-      <ul class="plain-list">
-        <li><a href="work.html">→ work</a></li>
-        <li><a href="projects.html">→ projects</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <h2>A few things I believe about this work:</h2>
-  <ul class="beliefs">
-    <li>"Models that don't ship are hobbies."</li>
-    <li>"The most important question isn't which algorithm — it's whether anyone will look at the output."</li>
-    <li>"Latency is a feature. So is reliability. They're usually the last things people think about and the first things users notice."</li>
-    <li>"Good ML work is 20% modeling and 80% understanding what the problem actually is. Most people get this backwards."</li>
-    <li>"If you can't explain why the model is wrong, you don't understand the model."</li>
-    <li>"The best data pipeline is the one that's boring to operate."</li>
-    <li>"Optimization problems are everywhere. Most people just call them by other names."</li>
-    <li>"A/B tests tell you what happened. They rarely tell you why. That's where the interesting work starts."</li>
-    <li>"Junior engineers write code. Senior engineers decide what not to write."</li>
-    <li>"I'd rather be 80% right and in production than 99% right in a notebook."</li>
-  </ul>
-
-  <div class="contact-blurb">
-    <p>If you're working on something interesting or just want to talk about AI systems, data, or whatever you're building — I'm usually reachable. <a href="mailto:shrey.jain252@gmail.com">shrey.jain252@gmail.com</a></p>
-  </div>
+  </main>
 
   <footer>
-    <span>shrey.jain252@gmail.com</span>
-    <a href="https://github.com/shreyjain203" target="_blank" rel="noopener">GitHub</a>
-    <a href="https://linkedin.com/in/shreyjain203" target="_blank" rel="noopener">LinkedIn</a>
+    <div class="footer-inner">
+      <span>shrey.jain252@gmail.com</span>
+      <a href="https://github.com/shreyjain203" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/shreyjain203" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
   </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>

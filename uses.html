@@ -9,67 +9,94 @@
 <body>
 
   <nav>
-    <a href="index.html" class="site-name">Shrey Jain</a>
-    <a href="work.html">work</a>
-    <a href="projects.html">projects</a>
-    <a href="now.html">now</a>
-    <a href="uses.html" class="active">uses</a>
+    <div class="nav-inner">
+      <a href="index.html" class="site-name">Shrey Jain</a>
+      <div class="nav-links">
+        <a href="work.html">work</a>
+        <a href="projects.html">projects</a>
+        <a href="now.html">now</a>
+        <a href="uses.html" class="active">uses</a>
+      </div>
+    </div>
   </nav>
 
-  <p class="subline">Tools I actually use.</p>
+  <main>
+    <div class="container">
 
-  <h2>Languages</h2>
-  <ul class="uses-list">
-    <li><span class="tool-name">Python</span> — everything ML/data. first language I think in.</li>
-    <li><span class="tool-name">Swift</span> — iOS projects. learning to love it.</li>
-    <li><span class="tool-name">SQL</span> — still the most useful language I know.</li>
-    <li><span class="tool-name">Java</span> — Spring Boot for backend services at work.</li>
-  </ul>
+      <div class="page-header fade-in">
+        <p class="subline">Tools I actually use.</p>
+      </div>
 
-  <h2>ML / AI</h2>
-  <ul class="uses-list">
-    <li><span class="tool-name">PyTorch</span> — model training and experimentation.</li>
-    <li><span class="tool-name">HuggingFace</span> — fine-tuning, embeddings, evaluation.</li>
-    <li><span class="tool-name">LangChain</span> — RAG pipelines. useful until it isn't.</li>
-    <li><span class="tool-name">vLLM</span> — LLM serving. fast and practical.</li>
-    <li><span class="tool-name">Gurobi</span> — optimization. nothing else comes close for MIP.</li>
-  </ul>
+      <section class="fade-in">
+        <div class="uses-grid">
 
-  <h2>Infra &amp; Cloud</h2>
-  <ul class="uses-list">
-    <li><span class="tool-name">GCP</span> — primary cloud. Vertex AI, BigQuery, GKE, Cloud Run.</li>
-    <li><span class="tool-name">Docker</span> — everything gets containerized.</li>
-    <li><span class="tool-name">Kubernetes</span> — GKE for production workloads.</li>
-    <li><span class="tool-name">FastAPI</span> — default API framework. clean and fast.</li>
-  </ul>
+          <div class="card uses-card">
+            <div class="category-label">Languages</div>
+            <div class="uses-row"><span class="tool-name">Python</span><span class="tool-desc">everything ML/data. first language I think in.</span></div>
+            <div class="uses-row"><span class="tool-name">Swift</span><span class="tool-desc">iOS projects. learning to love it.</span></div>
+            <div class="uses-row"><span class="tool-name">SQL</span><span class="tool-desc">still the most useful language I know.</span></div>
+            <div class="uses-row"><span class="tool-name">Java</span><span class="tool-desc">Spring Boot for backend services at work.</span></div>
+          </div>
 
-  <h2>Data</h2>
-  <ul class="uses-list">
-    <li><span class="tool-name">PostgreSQL</span> — first choice for structured data.</li>
-    <li><span class="tool-name">Qdrant</span> — vector search in production.</li>
-    <li><span class="tool-name">Snowflake</span> — analytics warehouse.</li>
-    <li><span class="tool-name">BigQuery</span> — when you're already on GCP and need scale.</li>
-  </ul>
+          <div class="card uses-card">
+            <div class="category-label">ML / AI</div>
+            <div class="uses-row"><span class="tool-name">PyTorch</span><span class="tool-desc">model training and experimentation.</span></div>
+            <div class="uses-row"><span class="tool-name">HuggingFace</span><span class="tool-desc">fine-tuning, embeddings, evaluation.</span></div>
+            <div class="uses-row"><span class="tool-name">LangChain</span><span class="tool-desc">RAG pipelines. useful until it isn't.</span></div>
+            <div class="uses-row"><span class="tool-name">vLLM</span><span class="tool-desc">LLM serving. fast and practical.</span></div>
+            <div class="uses-row"><span class="tool-name">Gurobi</span><span class="tool-desc">optimization. nothing else comes close for MIP.</span></div>
+          </div>
 
-  <h2>Apps &amp; Tools</h2>
-  <ul class="uses-list">
-    <li><span class="tool-name">Claude Code</span> — daily driver for coding. changed how I work.</li>
-    <li><span class="tool-name">Cursor</span> — for Swift/iOS work specifically.</li>
-    <li><span class="tool-name">Obsidian</span> — notes and thinking.</li>
-    <li><span class="tool-name">Linear</span> — project tracking for personal projects.</li>
-  </ul>
+          <div class="card uses-card">
+            <div class="category-label">Infra &amp; Cloud</div>
+            <div class="uses-row"><span class="tool-name">GCP</span><span class="tool-desc">primary cloud. Vertex AI, BigQuery, GKE, Cloud Run.</span></div>
+            <div class="uses-row"><span class="tool-name">Docker</span><span class="tool-desc">everything gets containerized.</span></div>
+            <div class="uses-row"><span class="tool-name">Kubernetes</span><span class="tool-desc">GKE for production workloads.</span></div>
+            <div class="uses-row"><span class="tool-name">FastAPI</span><span class="tool-desc">default API framework. clean and fast.</span></div>
+          </div>
 
-  <h2>Hardware</h2>
-  <ul class="uses-list">
-    <li><span class="tool-name">MacBook Air M1</span> — does everything without complaining.</li>
-    <li><span class="tool-name">iPhone 16 Pro Max</span> — also my primary test device for SYNTH/sarvis.</li>
-  </ul>
+          <div class="card uses-card">
+            <div class="category-label">Data</div>
+            <div class="uses-row"><span class="tool-name">PostgreSQL</span><span class="tool-desc">first choice for structured data.</span></div>
+            <div class="uses-row"><span class="tool-name">Qdrant</span><span class="tool-desc">vector search in production.</span></div>
+            <div class="uses-row"><span class="tool-name">Snowflake</span><span class="tool-desc">analytics warehouse.</span></div>
+            <div class="uses-row"><span class="tool-name">BigQuery</span><span class="tool-desc">when you're already on GCP and need scale.</span></div>
+          </div>
+
+          <div class="card uses-card">
+            <div class="category-label">Apps &amp; Tools</div>
+            <div class="uses-row"><span class="tool-name">Claude Code</span><span class="tool-desc">daily driver for coding. changed how I work.</span></div>
+            <div class="uses-row"><span class="tool-name">Cursor</span><span class="tool-desc">for Swift/iOS work specifically.</span></div>
+            <div class="uses-row"><span class="tool-name">Obsidian</span><span class="tool-desc">notes and thinking.</span></div>
+            <div class="uses-row"><span class="tool-name">Linear</span><span class="tool-desc">project tracking for personal projects.</span></div>
+          </div>
+
+          <div class="card uses-card">
+            <div class="category-label">Hardware</div>
+            <div class="uses-row"><span class="tool-name">MacBook Air M1</span><span class="tool-desc">does everything without complaining.</span></div>
+            <div class="uses-row"><span class="tool-name">iPhone 16 Pro Max</span><span class="tool-desc">also my primary test device for SYNTH/sarvis.</span></div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
 
   <footer>
-    <span>shrey.jain252@gmail.com</span>
-    <a href="https://github.com/shreyjain203" target="_blank" rel="noopener">GitHub</a>
-    <a href="https://linkedin.com/in/shreyjain203" target="_blank" rel="noopener">LinkedIn</a>
+    <div class="footer-inner">
+      <span>shrey.jain252@gmail.com</span>
+      <a href="https://github.com/shreyjain203" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/shreyjain203" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
   </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>

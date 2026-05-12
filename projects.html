@@ -9,64 +9,93 @@
 <body>
 
   <nav>
-    <a href="index.html" class="site-name">Shrey Jain</a>
-    <a href="work.html">work</a>
-    <a href="projects.html" class="active">projects</a>
-    <a href="now.html">now</a>
-    <a href="uses.html">uses</a>
+    <div class="nav-inner">
+      <a href="index.html" class="site-name">Shrey Jain</a>
+      <div class="nav-links">
+        <a href="work.html">work</a>
+        <a href="projects.html" class="active">projects</a>
+        <a href="now.html">now</a>
+        <a href="uses.html">uses</a>
+      </div>
+    </div>
   </nav>
 
-  <p class="subline">Things I built because I needed them.</p>
+  <main>
+    <div class="container">
 
-  <div class="project">
-    <h3>SYNTH</h3>
-    <em>A personal OS layer for iOS.</em>
+      <div class="page-header fade-in">
+        <p class="subline">Things I built because I needed them.</p>
+      </div>
 
-    <span class="why-label">Why I built it</span>
-    <p>Every notes app, reminder app, and capture tool I tried had the same problem: it stored what I said, not what I meant. I wanted something that understood context — is this a task? a thought? something I need to act on tonight or next month? I couldn't find it so I built it.</p>
+      <section class="fade-in">
+        <div class="projects-grid">
 
-    <span class="what-label">What it is</span>
-    <p>SYNTH captures raw inputs throughout the day — notes, thoughts, tasks — classifies them via LLM, and routes them intelligently. Built in Swift. Classification runs on-device and via API with tiered model routing depending on complexity. The on-device path keeps it fast. The API path handles the hard cases.</p>
+          <div class="card project-card">
+            <div class="project-name">SYNTH</div>
+            <p class="project-tagline">A personal OS layer for iOS.</p>
+            <span class="section-label">Why I built it</span>
+            <p class="section-body">Every notes app, reminder app, and capture tool I tried had the same problem: it stored what I said, not what I meant. I wanted something that understood context — is this a task? a thought? something I need to act on tonight or next month? I couldn't find it so I built it.</p>
+            <span class="section-label">What it is</span>
+            <p class="section-body">SYNTH captures raw inputs throughout the day — notes, thoughts, tasks — classifies them via LLM, and routes them intelligently. Built in Swift. Classification runs on-device and via API with tiered model routing depending on complexity. The on-device path keeps it fast. The API path handles the hard cases.</p>
+            <div class="tags-row">
+              <span class="tag">Swift</span>
+              <span class="tag">LLM</span>
+              <span class="tag">iOS</span>
+              <span class="tag">On-device AI</span>
+            </div>
+          </div>
 
-    <p class="tags">Swift · LLM · iOS · On-device AI</p>
-  </div>
+          <div class="card project-card">
+            <div class="project-name">sarvis</div>
+            <p class="project-tagline">Behavioral intelligence, quietly running in the background.</p>
+            <span class="section-label">Why I built it</span>
+            <p class="section-body">I noticed I kept repeating the same mistakes — not big ones, small ones. Patterns I couldn't see because I was too close to them. I wanted something that watched over time and surfaced those patterns without me having to go looking. Not a journal. Not a mood tracker. Something quieter.</p>
+            <span class="section-label">What it is</span>
+            <p class="section-body">sarvis turns unstructured daily captures into behavioral signals over time. The core pipeline — capture → LLM structuring → pattern extraction — is working. Still early. The hard part isn't the engineering, it's figuring out what a useful 'pattern' actually is.</p>
+            <div class="tags-row">
+              <span class="tag">iOS</span>
+              <span class="tag">Swift</span>
+              <span class="tag">LLM</span>
+              <span class="tag">Behavioral data</span>
+            </div>
+          </div>
 
-  <hr>
+          <div class="card project-card">
+            <div class="project-name">cortex</div>
+            <p class="project-tagline">A PM brain for any git repo.</p>
+            <span class="section-label">Why I built it</span>
+            <p class="section-body">Every time I started a new session with an AI coding assistant, I'd spend the first 10 minutes re-explaining the project. What it does, how it's structured, what's already been tried. That's wasted time every single session. I wanted the assistant to already know. So I made a way for it to know.</p>
+            <span class="section-label">What it is</span>
+            <p class="section-body">cortex is a Claude Code skill I built and open-sourced. It installs a post-commit hook that automatically scans your repo and updates a private context file after every push. Any AI assistant you bring into the project picks it up immediately. No re-explaining.</p>
+            <div class="tags-row">
+              <span class="tag">Claude Code</span>
+              <span class="tag">Shell</span>
+              <span class="tag">Open source</span>
+              <span class="tag">Developer tools</span>
+            </div>
+            <a class="project-link" href="https://github.com/shreyjain203" target="_blank" rel="noopener">GitHub →</a>
+          </div>
 
-  <div class="project">
-    <h3>sarvis</h3>
-    <em>Behavioral intelligence, quietly running in the background.</em>
+        </div>
+      </section>
 
-    <span class="why-label">Why I built it</span>
-    <p>I noticed I kept repeating the same mistakes — not big ones, small ones. Patterns I couldn't see because I was too close to them. I wanted something that watched over time and surfaced those patterns without me having to go looking. Not a journal. Not a mood tracker. Something quieter.</p>
-
-    <span class="what-label">What it is</span>
-    <p>sarvis turns unstructured daily captures into behavioral signals over time. The core pipeline — capture → LLM structuring → pattern extraction — is working. Still early. The hard part isn't the engineering, it's figuring out what a useful 'pattern' actually is.</p>
-
-    <p class="tags">iOS · Swift · LLM · Behavioral data</p>
-  </div>
-
-  <hr>
-
-  <div class="project">
-    <h3>cortex</h3>
-    <em>A PM brain for any git repo.</em>
-
-    <span class="why-label">Why I built it</span>
-    <p>Every time I started a new session with an AI coding assistant, I'd spend the first 10 minutes re-explaining the project. What it does, how it's structured, what's already been tried. That's wasted time every single session. I wanted the assistant to already know. So I made a way for it to know.</p>
-
-    <span class="what-label">What it is</span>
-    <p>cortex is a Claude Code skill I built and open-sourced. It installs a post-commit hook that automatically scans your repo and updates a private context file after every push. Any AI assistant you bring into the project picks it up immediately. No re-explaining.</p>
-
-    <p class="tags">Claude Code · Shell · Open source · Developer tools</p>
-    <p style="font-size:0.8rem; margin-top:0.4rem;"><a href="https://github.com/shreyjain203" target="_blank" rel="noopener">GitHub →</a></p>
-  </div>
+    </div>
+  </main>
 
   <footer>
-    <span>shrey.jain252@gmail.com</span>
-    <a href="https://github.com/shreyjain203" target="_blank" rel="noopener">GitHub</a>
-    <a href="https://linkedin.com/in/shreyjain203" target="_blank" rel="noopener">LinkedIn</a>
+    <div class="footer-inner">
+      <span>shrey.jain252@gmail.com</span>
+      <a href="https://github.com/shreyjain203" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/shreyjain203" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
   </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
