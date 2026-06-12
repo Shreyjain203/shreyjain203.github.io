@@ -10,4 +10,4 @@ This website was built using the following technologies:
 3. JavaScript
 4. SCSS (Syntactically Awesome Style Sheets)
 ## Contact
-If you have any questions or comments, please feel free to contact me at shreyjain203@gmail.com.
+If you have any questions or comments, please feel free to contact me at shrey.jain252@gmail.com.

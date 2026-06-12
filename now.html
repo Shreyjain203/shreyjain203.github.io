@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Now — Shrey Jain</title>
-  <link rel="stylesheet" href="assets/css/main.css">
+  <meta name="description" content="What Shrey Jain is focused on right now.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
@@ -23,36 +27,36 @@
   <main>
     <div class="container">
 
-      <div class="page-header fade-in">
-        <h1>What I'm doing now</h1>
+      <div class="page-head fade-in">
+        <h1>Now</h1>
       </div>
 
-      <section class="fade-in">
-        <div class="card now-card">
-          <div class="now-content">
-            <p>Currently at Meta, working on AI systems for internal operations teams. Most of my time goes into LLM-based tooling and OR models that have to work — not demo, actually work — in production environments where the cost of being wrong is real.</p>
-            <p>On the side, I'm deep in SYNTH and sarvis. Both are iOS projects. Both are trying to make your phone smarter about what you're thinking, not just what you're doing.</p>
-            <p>I'm also spending more time thinking about how AI agents should be structured when the task is open-ended. No clean answers yet.</p>
-          </div>
-          <div class="now-updated">Last updated: May 2026</div>
-        </div>
-      </section>
+      <div class="now-body fade-in">
+        <p>Currently at Meta, working on AI systems for internal operations teams. Most of my time goes into LLM-based tooling and OR models that have to work — not demo, actually work — in production environments where the cost of being wrong is real.</p>
+        <p>On the side, I'm deep in SYNTH and sarvis. Both are iOS projects. Both are trying to make your phone smarter about what you're thinking, not just what you're doing.</p>
+        <p>I'm also spending more time thinking about how AI agents should be structured when the task is open-ended. No clean answers yet.</p>
+        <div class="last-updated">Last updated: June 2026</div>
+      </div>
 
     </div>
   </main>
 
   <footer>
     <div class="footer-inner">
-      <span>shrey.jain252@gmail.com</span>
-      <a href="https://github.com/shreyjain203" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://linkedin.com/in/shreyjain203" target="_blank" rel="noopener">LinkedIn</a>
+      <span>Shrey Jain · San Francisco</span>
+      <div class="footer-links">
+        <a href="mailto:shrey.jain252@gmail.com">Email</a>
+        <a href="https://github.com/shreyjain203" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/shreyjain203" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://medium.com/@shreyjain203" target="_blank" rel="noopener">Medium</a>
+      </div>
     </div>
   </footer>
 
   <script>
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-    }, { threshold: 0.1 });
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
 
