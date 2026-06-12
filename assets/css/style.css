@@ -289,6 +289,50 @@ section { padding: 84px 0 0; }
 .life-text h2 { font-size: clamp(1.9rem, 4vw, 2.5rem); margin-bottom: 20px; letter-spacing: -0.01em; }
 .life-text p { color: var(--ink-soft); margin-bottom: 1.1em; }
 
+/* photo strip */
+
+.photo-strip {
+  margin-top: 36px;
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 12px 4px 20px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.photo-strip::-webkit-scrollbar { display: none; }
+
+.photo-strip figure {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.photo-strip img {
+  height: 240px;
+  width: auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 14px 34px rgba(27, 23, 19, 0.14);
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+.photo-strip img:hover {
+  transform: translateY(-5px) scale(1.015);
+  box-shadow: 0 22px 48px rgba(27, 23, 19, 0.2);
+}
+
+.photo-strip figcaption {
+  margin-top: 10px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--ink-faint);
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .photo-strip img { height: 190px; }
+}
+
 /* contact */
 
 .contact {
@@ -390,6 +434,53 @@ section { padding: 84px 0 0; }
 
 .project-link { display: inline-block; margin-top: 20px; font-weight: 600; font-size: 0.95rem; }
 .project-link:hover { transform: translateX(2px); }
+
+/* repo grid */
+
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.repo-card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 28px 26px 24px;
+  color: inherit;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
+}
+.repo-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(211, 95, 14, 0.35);
+  box-shadow: 0 22px 48px rgba(27, 23, 19, 0.1);
+  color: inherit;
+}
+
+.repo-card h3 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.repo-card p { font-size: 0.92rem; color: var(--ink-soft); }
+
+.repo-lang {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+@media (max-width: 880px) {
+  .repo-grid { grid-template-columns: 1fr; }
+}
 
 /* now */
 

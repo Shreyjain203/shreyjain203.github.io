@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects · Shrey Jain</title>
-  <meta name="description" content="Things Shrey Jain builds for himself: SYNTH, sarvis, cortex.">
+  <meta name="description" content="Things Shrey Jain builds for himself: sarvis, cortex.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -33,24 +33,12 @@
       </div>
 
       <div class="project fade-in">
-        <h2>SYNTH</h2>
-        <p class="one-liner">A personal OS layer for iOS.</p>
-        <h3>Why I built it</h3>
-        <p>Every notes app, reminder app, and capture tool I tried had the same problem: it stored what I said, not what I meant. I wanted something that understood context. Is this a task? A thought? Something I need to act on tonight or next month? I couldn't find it, so I built it.</p>
-        <h3>What it is</h3>
-        <p>SYNTH captures raw inputs throughout the day (notes, thoughts, tasks), classifies them via LLM, and routes them intelligently. Built in Swift. Classification runs on-device and via API with tiered model routing depending on complexity. The on-device path keeps it fast. The API path handles the hard cases.</p>
-        <div class="tags">
-          <span>Swift</span><span>LLM</span><span>iOS</span><span>On-device AI</span>
-        </div>
-      </div>
-
-      <div class="project fade-in">
         <h2>sarvis</h2>
         <p class="one-liner">Behavioral intelligence, quietly running in the background.</p>
         <h3>Why I built it</h3>
         <p>I noticed I kept repeating the same mistakes. Not big ones, small ones. Patterns I couldn't see because I was too close to them. I wanted something that watched over time and surfaced those patterns without me having to go looking. Not a journal. Not a mood tracker. Something quieter.</p>
         <h3>What it is</h3>
-        <p>sarvis turns unstructured daily captures into behavioral signals over time. The core pipeline (capture, LLM structuring, pattern extraction) is working. The hard part isn't the engineering, it's figuring out what a useful "pattern" actually is.</p>
+        <p>sarvis captures raw inputs throughout the day (notes, thoughts, tasks), structures them via LLM, and turns them into behavioral signals over time. Built in Swift. The core pipeline (capture, LLM structuring, pattern extraction) is working. The hard part isn't the engineering, it's figuring out what a useful "pattern" actually is.</p>
         <div class="tags">
           <span>iOS</span><span>Swift</span><span>LLM</span><span>Behavioral data</span>
         </div>
@@ -66,8 +54,29 @@
         <div class="tags">
           <span>Claude Code</span><span>Shell</span><span>Open source</span><span>Developer tools</span>
         </div>
-        <a class="project-link" href="https://github.com/shreyjain203" target="_blank" rel="noopener">→ GitHub</a>
+        <a class="project-link" href="https://github.com/shreyjain203/cortex" target="_blank" rel="noopener">→ GitHub</a>
       </div>
+
+      <section class="fade-in">
+        <div class="section-label">Also on GitHub</div>
+        <div class="repo-grid">
+          <a class="repo-card" href="https://github.com/shreyjain203/Wikipedia-Continual-Learning-RAG" target="_blank" rel="noopener">
+            <h3>Wikipedia Continual-Learning RAG</h3>
+            <p>A RAG system that grounds itself on Wikipedia and fine-tunes itself when it can't find an answer. It keeps learning instead of going stale.</p>
+            <span class="repo-lang">Python</span>
+          </a>
+          <a class="repo-card" href="https://github.com/shreyjain203/Machine-Learning-Model-to-Production-Website-using-GKE" target="_blank" rel="noopener">
+            <h3>ML Model to Production on GKE</h3>
+            <p>An end-to-end deployment pipeline on GCP: train, containerize with Docker, push to Artifact Registry, deploy on GKE, serve through a frontend. Written up step by step on Medium.</p>
+            <span class="repo-lang">Python · GCP</span>
+          </a>
+          <a class="repo-card" href="https://github.com/shreyjain203/Spotify-recommendation-system" target="_blank" rel="noopener">
+            <h3>Spotify Recommendation System</h3>
+            <p>Pulls listening data from the Spotify API, lands it in Cloud Storage, orchestrates with Airflow into MongoDB, and serves recommendations on top.</p>
+            <span class="repo-lang">Python · Airflow</span>
+          </a>
+        </div>
+      </section>
 
     </div>
   </main>
