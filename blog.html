@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog · Shrey Jain</title>
+  <meta name="description" content="Writing by Shrey Jain on ML, data, and shipping things to production.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="site-name">Shrey Jain</a>
+      <div class="nav-links">
+        <a href="work.html">work</a>
+        <a href="projects.html">projects</a>
+        <a href="blog.html" class="active">blog</a>
+        <a href="now.html">now</a>
+        <a href="uses.html">uses</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <!-- Post list view -->
+      <div id="list-view">
+        <div class="page-head fade-in">
+          <h1>Blog</h1>
+          <p>Things I've figured out the hard way, written down so I don't have to figure them out twice.</p>
+        </div>
+        <div id="post-list" class="post-list"></div>
+      </div>
+
+      <!-- Single post view -->
+      <div id="post-view" style="display:none">
+        <a href="blog.html" class="back-link" id="back-link">← All posts</a>
+        <article class="post-body" id="post-content"></article>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>Shrey Jain · San Francisco</span>
+      <div class="footer-links">
+        <a href="mailto:shrey.jain252@gmail.com">Email</a>
+        <a href="https://github.com/shreyjain203" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/shreyjain203" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+  <script>
+    const listView = document.getElementById('list-view');
+    const postView = document.getElementById('post-view');
+    const postList = document.getElementById('post-list');
+    const postContent = document.getElementById('post-content');
+
+    function parseFrontmatter(text) {
+      const m = text.match(/^---\n([\s\S]*?)\n---\n/);
+      if (!m) return { meta: {}, body: text };
+      const meta = {};
+      m[1].split('\n').forEach(line => {
+        const i = line.indexOf(':');
+        if (i > -1) meta[line.slice(0, i).trim()] = line.slice(i + 1).trim();
+      });
+      return { meta, body: text.slice(m[0].length) };
+    }
+
+    async function showPost(slug) {
+      const res = await fetch('blog/' + slug + '.md');
+      if (!res.ok) { showList(); return; }
+      const { meta, body } = parseFrontmatter(await res.text());
+      postContent.innerHTML =
+        '<div class="post-head"><h1>' + (meta.title || slug) + '</h1>' +
+        (meta.date ? '<div class="post-date">' + meta.date + '</div>' : '') + '</div>' +
+        marked.parse(body);
+      document.title = (meta.title || 'Blog') + ' · Shrey Jain';
+      listView.style.display = 'none';
+      postView.style.display = 'block';
+      window.scrollTo(0, 0);
+    }
+
+    async function showList() {
+      postView.style.display = 'none';
+      listView.style.display = 'block';
+      document.title = 'Blog · Shrey Jain';
+      if (postList.childElementCount) return;
+      const posts = await (await fetch('blog/index.json')).json();
+      postList.innerHTML = posts.map(p => {
+        const slug = p.file.replace(/\.md$/, '');
+        return '<a class="post-card fade-in visible" href="blog.html#' + slug + '">' +
+          '<div class="post-date">' + p.date + '</div>' +
+          '<h2>' + p.title + '</h2></a>';
+      }).join('');
+    }
+
+    function route() {
+      const slug = location.hash.slice(1);
+      if (slug) showPost(slug); else showList();
+    }
+
+    window.addEventListener('hashchange', route);
+    route();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
